@@ -19,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D01CBE225E4B29C00B56F28 /* Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Release.plist"; sourceTree = "<group>"; };
 		8DA10B3824C1389200A3836C /* FlutterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlutterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA10B3B24C1389200A3836C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DA10B3C24C1389200A3836C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,7 +30,7 @@
 		8DA10B4524C1389200A3836C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DA10B4724C1389300A3836C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DA10B4A24C1389300A3836C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8DA10B4C24C1389300A3836C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DA10B4C24C1389300A3836C /* Info-Debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Debug.plist"; sourceTree = "<group>"; };
 		8DA10B4D24C1389300A3836C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8DA10B5424C13F8700A3836C /* NavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		8DA10B5524C13F8700A3836C /* NavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
@@ -99,7 +100,8 @@
 				8DA10B4424C1389200A3836C /* Main.storyboard */,
 				8DA10B4724C1389300A3836C /* Assets.xcassets */,
 				8DA10B4924C1389300A3836C /* LaunchScreen.storyboard */,
-				8DA10B4C24C1389300A3836C /* Info.plist */,
+				8DA10B4C24C1389300A3836C /* Info-Debug.plist */,
+				8D01CBE225E4B29C00B56F28 /* Info-Release.plist */,
 				8DA10B4D24C1389300A3836C /* main.m */,
 			);
 			path = FlutterDemo;
@@ -113,7 +115,7 @@
 			buildConfigurationList = 8DA10B5124C1389300A3836C /* Build configuration list for PBXNativeTarget "FlutterDemo" */;
 			buildPhases = (
 				CE087723031D80D0AB8F61B0 /* [CP] Check Pods Manifest.lock */,
-				689451384ADCA80BA7D3A606 /* [CP-User] Run Flutter Build Script */,
+				1D047B018257A9F927C5F7BB /* [CP-User] Run Flutter Build my_flutter Script */,
 				8DA10B3424C1389200A3836C /* Sources */,
 				8DA10B3524C1389200A3836C /* Frameworks */,
 				8DA10B3624C1389200A3836C /* Resources */,
@@ -174,9 +176,9 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		689451384ADCA80BA7D3A606 /* [CP-User] Run Flutter Build Script */ = {
+		1D047B018257A9F927C5F7BB /* [CP-User] Run Flutter Build my_flutter Script */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
@@ -185,10 +187,10 @@
 				"${SRCROOT}/../my_flutter/.ios/Flutter/engine/Flutter.framework/Flutter",
 				"${SRCROOT}/../my_flutter/.ios/Flutter/flutter_export_environment.sh",
 			);
-			name = "[CP-User] Run Flutter Build Script";
-			runOnlyForDeploymentPostprocessing = 1;
+			name = "[CP-User] Run Flutter Build my_flutter Script";
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../my_flutter/.ios/Flutter/flutter_export_environment.sh\"\n\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build\n";
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../my_flutter/.ios/Flutter/flutter_export_environment.sh\"\n\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
 		};
 		A682C3BDF2A54E0A2BF268C9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -383,7 +385,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UPN4Y9U3TT;
-				INFOPLIST_FILE = FlutterDemo/Info.plist;
+				INFOPLIST_FILE = "FlutterDemo/Info-$(CONFIGURATION).plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -402,7 +404,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UPN4Y9U3TT;
-				INFOPLIST_FILE = FlutterDemo/Info.plist;
+				INFOPLIST_FILE = "FlutterDemo/Info-$(CONFIGURATION).plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
